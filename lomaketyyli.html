@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
+    <link type="text/css" rel="stylesheet" href="css/tyylit.css">
+</head>
+
+<body>
+
+    <form>
+
+        <fieldset>
+            <legend>Contact information</legend>
+
+            <table>
+
+                <tr>
+                    <td><label for="fname">First name:</label></td>
+                    <td><input type="text" id="fname" name="fname"></td>
+
+                    <td rowspan="2">
+                        <label>Preferred contact method:</label><br>
+                        <input type="checkbox" id="emailcontact" name="contact">
+                        <label for="emailcontact">Email</label><br>
+
+                        <input type="checkbox" id="phonecontact" name="contact">
+                        <label for="phonecontact">Telephone</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="lname">Last name:</label></td>
+                    <td><input type="text" id="lname" name="lname"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Telephone:</label></td>
+                    <td><input type="tel" id="phone" name="phone"></td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Feedback</legend>
+
+            <table>
+
+                <tr>
+                    <td><label for="subject">Message subject:</label></td>
+                    <td><input type="text" id="subject" name="subject"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <textarea id="message" name="message" rows="20" cols="70"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="file">Attack a file:</label></td>
+                    <td><input type="file" id="file" name="file"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <button type="submit">Send</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
