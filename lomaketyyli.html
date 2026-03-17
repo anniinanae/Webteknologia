@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 
 <head>
     <meta charset="UTF-8">
     <title>Contact Form</title>
-    <link type="text/css" rel="stylesheet" href="css/tyylit.css">
+    <link rel="stylesheet" href="css/tyylit.css">
 </head>
 
 <body>
@@ -12,73 +12,56 @@
     <form>
 
         <fieldset>
-            <legend>Contact information</legend>
+            <legend>Henkilötiedot</legend>
 
-            <table>
+            <div class="form-group">
+                <label for="fname">Etunimi:</label>
+                <input type="text" id="fname" name="fname">
+            </div>
 
-                <tr>
-                    <td><label for="fname">First name:</label></td>
-                    <td><input type="text" id="fname" name="fname"></td>
+            <div class="form-group">
+                <label for="lname">Sukunimi:</label>
+                <input type="text" id="lname" name="lname">
+            </div>
 
-                    <td rowspan="2">
-                        <label>Preferred contact method:</label><br>
+            <div class="form-group">
+                <label for="password">Salasana:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label>Valinta:</label>
+
+                <div class="checkbox-group">
+                    <label>
                         <input type="checkbox" id="emailcontact" name="contact">
-                        <label for="emailcontact">Email</label><br>
+                        Sähköposti
+                    </label>
 
+                    <label>
                         <input type="checkbox" id="phonecontact" name="contact">
-                        <label for="phonecontact">Telephone</label>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label for="lname">Last name:</label></td>
-                    <td><input type="text" id="lname" name="lname"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="email">Email:</label></td>
-                    <td><input type="email" id="email" name="email"></td>
-                </tr>
-
-                <tr>
-                    <td><label for="phone">Telephone:</label></td>
-                    <td><input type="tel" id="phone" name="phone"></td>
-                </tr>
-
-            </table>
+                        Puhelin
+                    </label>
+                </div>
+            </div>
 
         </fieldset>
-
-        <br>
 
         <fieldset>
             <legend>Feedback</legend>
 
-            <table>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="8"></textarea>
+            </div>
 
-                <tr>
-                    <td><label for="subject">Message subject:</label></td>
-                    <td><input type="text" id="subject" name="subject"></td>
-                </tr>
+            <div class="form-group">
+                <label for="file">Liitä tiedosto:</label>
+                <input type="file" id="file" name="file">
+            </div>
 
-                <tr>
-                    <td colspan="2">
-                        <textarea id="message" name="message" rows="20" cols="70"></textarea>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label for="file">Attack a file:</label></td>
-                    <td><input type="file" id="file" name="file"></td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <button type="submit">Send</button>
-                    </td>
-                </tr>
-
-            </table>
+            <div class="form-group">
+                <button type="submit">Lähetä</button>
+            </div>
 
         </fieldset>
 
