@@ -3,8 +3,8 @@ body {
 }
 
 fieldset {
-    background-color: #909eb4;
-    border-color: pink;
+    background-color: white;
+    border-color: rgb(182, 229, 231);
     border-width: 6px;
 }
 
@@ -13,7 +13,7 @@ td {
     letter-spacing: 2px;
     font-family: 'Times New Roman', Times, serif;
     border-width: 4px;
-    border-color: aquamarine;
+    border-color: lightblue;
     border-style: solid;
     margin: 20px;
     padding: 10px;
@@ -21,7 +21,7 @@ td {
 }
 
 tr {
-    border-color: yellow;
+    border-color: red;
     left: 69px;
     border-radius: 57%;
 
