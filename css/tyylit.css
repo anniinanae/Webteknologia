@@ -30,7 +30,7 @@ textarea {
     padding: 8px;
     font-size: 14px;
     border-radius: 6px;
-    border: solid #ccc;
+    border: solid #dc1212;
     box-sizing: border-box;
 }
 
@@ -52,7 +52,7 @@ button {
     border: none;
     border-radius: 6px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(138, 28, 28);
     cursor: pointer;
     transition: 0.3s;
 }

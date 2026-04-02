@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderni HTML Opetussivu</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* NAVBAR */
+        nav.navbar {
+            background: #1f2937;
+        }
+
+        nav.navbar .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #f9fafb;
+        }
+
+        nav.navbar .nav-link {
+            color: #f9fafb;
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #0ea5e9;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0ea5e9, #6366f1);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero .btn-primary {
+            background: #facc15;
+            border: none;
+            color: #1f2937;
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn-primary:hover {
+            background: #eab308;
+            transform: translateY(-3px);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1f2937;
+        }
+
+        /* CARD STYLING */
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-card img {
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1f2937;
+            color: #f9fafb;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* RESPONSIVE GRID */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">HTML Opetussivu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tehtavat">Tehtävät</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>HTML perusteet</h1>
+            <p>Opi HTML, CSS ja Bootstrap käytännönläheisesti modernilla sivulla.</p>
+            <a href="#html" class="btn btn-primary">Aloita oppiminen</a>
+        </div>
+    </section>
+
+    <!-- HTML SECTION -->
+    <section id="html">
+        <h2 class="section-title">HTML Perustagit</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;HTML&gt;</h4>
+                        <p>Koko verkkosivun pääelementti. Kaikki sisältö tulee tämän sisään.</p>
+                        <a href="https://www.w3schools.com/html/">HTML Tutorial</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;HEAD&gt;</h4>
+                        <p>Sivun asetukset, CSS-linkit ja otsikko.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;BODY&gt;</h4>
+                        <p>Sisältää kaiken näkyvän sisällön.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;P&gt;</h4>
+                        <p>Kappaleteksti</p>
+                        <p>Esimerkki tekstistä.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;IMG&gt;</h4>
+                        <p>Kuvan lisääminen sivulle.</p>
+                        <img src="laptop.jpg" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;BR&gt;</h4>
+                        <p>Rivinvaihto HTML:ssä, siirtää tekstin seuraavalle riville ilman uutta kappaletta</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;H1&gt;</h4>
+                        <p>Suurin otsikkotagi HTML:ssä, käytetään sivun tärkeimmän otsikon näyttämiseen</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <h4>&lt;A&gt;</h4>
+                        <p>Linkki toiselle sivulle.</p>
+                        <a href="https://www.google.com" class="btn btn-sm btn-primary mt-2">Avaa Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CSS SECTION -->
+    <section id="css">
+        <h2 class="section-title">CSS Muotoilu</h2>
+        <div class="container">
+            <div class="feature-card">
+                <p>CSS:llä muotoillaan verkkosivun ulkoasu kuten värit, fontit, marginaalit ja asettelu.</p>
+                <a href="https://www.w3schools.com/css/">CSS Tutorial</a>
+                <pre>
+body {
+    background-color: lightgray;
+}
+
+h1 {
+    color: blue;
+}
+                </pre>
+                <p>CSS voidaan lisätä head-osaan style-tagilla tai erilliseen style.css tiedostoon.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOTSTRAP SECTION -->
+    <section id="bootstrap">
+        <h2 class="section-title">Bootstrap</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <h4>Navbar</h4>
+                        <p>Valmis navigointivalikko</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <h4>Grid</h4>
+                        <p>Responsiivinen asettelu eri näytöille</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <h4>Card</h4>
+                        <p>Valmis sisältölaatikko</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEHTÄVÄT -->
+    <section id="tehtavat">
+        <h2 class="section-title">Tehtävät</h2>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h4>Tehtävä 1</h4>
+                        <p><a href="https://anniinanae.github.io/Webteknologia/lomaketyyli.html">Lomaketyyli</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <h4>Tehtävä 2</h4>
+                        <p><a href="https://anniinanae.github.io/Webteknologia/kurssit.html">Kurssit</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>HTML Academy | 2026</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
