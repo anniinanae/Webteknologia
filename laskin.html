@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Laskin</title>
+    <link rel="stylesheet" href="css/laskin.css">
+    <script src="js/laskin.js" defer></script>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h2>Laskin</h2>
+
+        <!-- Luku A -->
+        <div class="row">
+            <button onclick="decreaseA()">-</button>
+            <input type="text" id="numberA" readonly>
+            <button onclick="increaseA()">+</button>
+        </div>
+
+        <!-- Operaattori -->
+        <div class="row">
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <!-- Luku B -->
+        <div class="row">
+            <button onclick="decreaseB()">-</button>
+            <input type="text" id="numberB" readonly>
+            <button onclick="increaseB()">+</button>
+        </div>
+
+        <!-- Laske -->
+        <div class="row">
+            <button class="operator" onclick="calculate()">Laske</button>
+        </div>
+
+        <!-- Tulos -->
+        <div class="display">
+            <input type="text" id="result" placeholder="Tulos näkyy tässä" readonly>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

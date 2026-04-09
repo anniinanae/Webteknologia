@@ -1,6 +1,6 @@
 // Kartan oletusosoite, joka näkyy sivun latautuessa
 window.onload = function () {
-    let address = 'Yliopistonkatu 36';
+    let address = 'Yrjönkatu 7';
     let city = 'Lappeenranta';
     updateMap(address, city);
 }
