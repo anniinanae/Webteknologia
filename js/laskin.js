@@ -1,42 +1,76 @@
-window.onload = function () {
-    document.getElementById("numberA").value = randomNumber();
-    document.getElementById("numberB").value = randomNumber();
-};
+let counter = 0;
+
+function init() {
+    document.getElementById('num1').value = randomNumber();
+    document.getElementById('num2').value = randomNumber();
+}
 
 function randomNumber() {
     return Math.floor(Math.random() * 10) + 1;
 }
 
-// A luku
-function increaseA() {
-    let a = document.getElementById("numberA");
-    a.value = parseInt(a.value) + 1;
+// --- NAPIT ---
+function minusNro1() {
+    let n = parseInt(document.getElementById('num1').value) || 0;
+    if (n > 1) document.getElementById('num1').value = n - 1;
 }
 
-function decreaseA() {
-    let a = document.getElementById("numberA");
-    a.value = parseInt(a.value) - 1;
+function plusNro1() {
+    let n = parseInt(document.getElementById('num1').value) || 0;
+    if (n < 10) document.getElementById('num1').value = n + 1;
 }
 
-// B luku
-function increaseB() {
-    let b = document.getElementById("numberB");
-    b.value = parseInt(b.value) + 1;
+function minusNro2() {
+    let n = parseInt(document.getElementById('num2').value) || 0;
+    if (n > 1) document.getElementById('num2').value = n - 1;
 }
 
-function decreaseB() {
-    let b = document.getElementById("numberB");
-    b.value = parseInt(b.value) - 1;
+function plusNro2() {
+    let n = parseInt(document.getElementById('num2').value) || 0;
+    if (n < 10) document.getElementById('num2').value = n + 1;
 }
 
-// Laske
+// --- LASKU ---
 function calculate() {
+    let n1 = parseInt(document.getElementById('num1').value) || 0;
+    let n2 = parseInt(document.getElementById('num2').value) || 0;
+    let op = document.getElementById('operation').value;
 
-    let numberA = document.getElementById("numberA").value;
-    let numberB = document.getElementById("numberB").value;
-    let operation = document.getElementById("operation").value;
+    let result;
 
-    let total = eval(numberA + operation + numberB);
+    switch (op) {
+        case '+':
+            result = n1 + n2;
+            break;
+        case '-':
+            result = n1 - n2;
+            break;
+        case '*':
+            result = n1 * n2;
+            break;
+        case '/':
+            result = n2 !== 0 ? (n1 / n2).toFixed(2) : "Ei voi jakaa nollalla";
+            break;
+        default:
+            result = "Virhe";
+    }
 
-    document.getElementById("result").value = total;
+    counter++;
+
+    document.getElementById('tulos').innerText = result;
+    document.getElementById('clicks').innerText = "Laskuja: " + counter;
+
+    // Historia
+    let p = document.createElement('p');
+    p.textContent = `${n1} ${op} ${n2} = ${result}`;
+    document.getElementById('history').appendChild(p);
+}
+
+// --- INFO ---
+function showInfo() {
+    document.getElementById('infoText').style.display = "block";
+}
+
+function hideInfo() {
+    document.getElementById('infoText').style.display = "none";
 }
