@@ -1,14 +1,11 @@
-function showList() {
-    index = index + 1;
-    if (index >= cats_array.length) {
-        index = 0;
-    }
-    console.log(index);
-    document.getElementById("catImage").src = cats_array[index].src;
-    document.getElementById("catName").textContent = cats_array[index].name;
+function Lista() {
+    const container = document.getElementById('image-container');
+    container.classList.remove('grid-container');
+    container.classList.add('list-container');
 }
 
-function showGrid() {
-    document.getElementById('image-container').classList.remove('list-container');
-    document.getElementById('image-container').classList.add('grid-container');
+function Ruudukko() {
+    const container = document.getElementById('image-container');
+    container.classList.remove('list-container');
+    container.classList.add('grid-container');
 }
