@@ -1,0 +1,67 @@
+ body {
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-color: #f7f9fc;
+     color: #333;
+     margin: 0;
+     padding: 20px;
+ }
+
+ h2 {
+     text-align: center;
+     color: #1a73e8;
+ }
+
+ .form-group {
+     margin-bottom: 15px;
+     max-width: 400px;
+ }
+
+ label {
+     font-weight: bold;
+     display: block;
+     margin-bottom: 5px;
+ }
+
+ input[type="text"] {
+     width: 100%;
+     padding: 8px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     box-sizing: border-box;
+ }
+
+ button {
+     background-color: #1a73e8;
+     color: white;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 16px;
+ }
+
+ button:hover {
+     background-color: #1662c4;
+ }
+
+ .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .grid-container {
+     max-width: 600px;
+     margin: auto;
+ }
+
+ .grid-item img {
+     width: 100%;
+     border-radius: 10px;
+     margin-bottom: 20px;
+ }
+
+ fieldset label {
+     display: block;
+     margin-bottom: 5px;
+ }

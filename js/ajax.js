@@ -1,82 +1,76 @@
-var counter = 0;
+let counter = 0;
+
+$(document).ready(function () {
+
+    init();
+    $("#accordion").accordion({
+        collapsible: true,
+        active: false,
+        heightStyle: "content"
+    });
+
+    $("#button").click(function () {
+
+        $("#gif").show();
+
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => response.json())
+            .then(result => {
+
+                $("#gif").hide();
+
+                $("#text").html("<i>" + result.value + "</i>");
+
+                counter++;
+                $("#clicks").text("Laskuri: " + counter);
+            })
+            .catch(error => {
+                $("#gif").hide();
+                $("#text").text("Virhe haussa");
+                console.log(error);
+            });
+    });
+
+
+    $(".jq-header").click(function () {
+
+        let target = $(this).data("target");
+
+        // Näytetään lataus
+        $("#" + target).html("Ladataan...");
+
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => response.json())
+            .then(result => {
+
+                $("#" + target).html("<i>" + result.value + "</i>");
+            })
+            .catch(error => {
+                $("#" + target).text("Virhe haussa");
+                console.log(error);
+            });
+    });
+
+    $(".bs-btn").click(function () {
+
+        let target = $(this).data("target");
+
+        $("#" + target).html("Ladataan...");
+
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => response.json())
+            .then(result => {
+
+                $("#" + target).html("<i>" + result.value + "</i>");
+            })
+            .catch(error => {
+                $("#" + target).text("Virhe haussa");
+                console.log(error);
+            });
+    });
+
+});
 
 function init() {
-    document.getElementById("gif").style.display = "none";
-}
-
-function getData() {
-    document.getElementById("gif").style.display = "block";
-
-    fetch("https://api.chucknorris.io/jokes/random")
-
-        .then(function (response) {
-            //.then, palauttaa tässä Promisen (lupauksen), jota käytetään seuraavassa then-funktiossa. 
-            return response.json(); //huom. tässä response tulee JSON-muodossa
-        })
-        .then(function (result) {
-
-            document.getElementById("text").innerHTML += "<br>" + "<i>" + result.value + "</i>";
-            document.getElementById("gif").style.display = "none";
-        })
-        .catch(function (error) {
-            //Jos lupaus epäonnistuu (eli lupaus on hylätty), tämä toiminto suoritetaan
-            console.log(error);
-        });
-
-    counter = counter + 1;
-    document.getElementById('clicks').innerHTML = "Laskuri: " + counter;
-}
-
-function getData1(buttonId) {
-
-    fetch("https://api.chucknorris.io/jokes/random")
-
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (result) {
-
-            if (buttonId === "bn1")
-                document.querySelector("#flush-collapseOne .accordion-body").innerHTML
-                    = "<i>" + result.value + "</i>";
-            if (buttonId === "bn2")
-                document.querySelector("#flush-collapseTwo .accordion-body").innerHTML
-                    = "<i>" + result.value + "</i>";
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-}
-
-$("#accordion").accordion({ collapsible: true });
-fetch("https://api.chucknorris.io/jokes/random")
-
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (result) {
-        document.getElementById("p1").innerHTML = "<i>" + result.value + "</i>";
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-$("#accordion").accordion("refresh");
-
-function getData2(hId) {
-
-    fetch("https://api.chucknorris.io/jokes/random")
-
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (result) {
-
-            if (hId === "h1")
-                document.getElementById("p1").innerHTML = "<i>" + result.value + "</i>";
-            if (hId === "h2")
-                document.getElementById("p2").innerHTML = "<i>" + result.value + "</i>";
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+    $("#gif").hide();
 }
