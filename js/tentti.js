@@ -12,5 +12,4 @@ function init() {
 
 function tilaaPizza() {
     let summa = document.getElementById('hinta').value;
-    alert("Kiitos tilauksesta! Loppusumma on: " + summa + "€");
 }
