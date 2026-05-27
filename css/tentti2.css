@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eeeeee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.custom-container {
+    width: 700px;
+    background: #bccab6;
+    border: 3px dashed #00b7c2;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: #1f2933;
+    letter-spacing: 2px;
+}
+
+.content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.bike-section img {
+    width: 200px;
+    border-radius: 20px;
+    background: white;
+    padding: 10px;
+}
+
+.bike-section p {
+    margin-top: 10px;
+    color: #333;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: white;
+    border-radius: 6px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter button {
+    width: 40px;
+    border: none;
+    background: #6b7280;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.counter input {
+    text-align: center;
+}
+
+.reserve-btn {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.reserve-btn:hover {
+    opacity: 0.9;
+}
